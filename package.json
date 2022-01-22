@@ -1,0 +1,19 @@
+{
+  "name": "clientside-wiki",
+  "private": true,
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "armornick",
+  "license": "CC0",
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "marked": "^4.0.10",
+    "vue": "^2.6.14"
+  }
+}
