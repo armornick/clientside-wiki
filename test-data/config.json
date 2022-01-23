@@ -1,0 +1,6 @@
+{
+    "navigation": [
+        { "title": "Home",  "url": "index.md" },
+        { "title": "Test",  "url": "test.md" }
+    ]
+}
