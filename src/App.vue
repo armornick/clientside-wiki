@@ -1,15 +1,30 @@
 
 <template>
+    <nav-bar v-if="config.navigation" :items="config.navigation" />
     <main-view />
 </template>
 
 <script>
+import axios from 'axios';
 import MainView from './MainView.vue';
+import NavBar from './NavBar.vue';
 
 export default {
     
     components: {
-        MainView
+        MainView, NavBar
+    },
+
+    data() {
+        return {
+            config: {}
+        };
+    },
+
+    created() {
+        axios.get('/config.json')
+            .then(response => (this.config = response.data))
+            .catch(reason => console.log(`could not get site configuration\n${reason}`));
     },
 
 }
@@ -24,7 +39,7 @@ export default {
         line-height: 1.3;
         color: #111;
 
-        max-width: 1140px;
+        max-width: 960px;
         margin: 0 auto;
     }
 
